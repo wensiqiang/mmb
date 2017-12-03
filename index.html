@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left fl">
+            <a href="javascript:;"><img src="images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_right fr">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_search">
+        <div class="search_left">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_btn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+    <div class="mmb_main">
+    <!--慢慢买导航-->
+    <div class="mmb_nav">
+        <ul class="clearfix nav_info">
+            <!--通过模板开始渲染显示数据  -->
+        </ul>
+    </div>
+    <!--慢慢买一个小条 -->
+    <div class="mmb_single clearfix">
+            <a href="javascript:;">
+            <span class="fl">超值折扣推荐</span>
+                <i class="fr"></i>
+            </a>
+        </div>
+    <!--慢慢买内容区域-->
+    <div class="mmb_content">
+            <ul class="product_list">
+              <!--通过模板开始渲染显示数据  -->
+            </ul>
+    </div>
+        <!--更多优惠-->
+        <div class="mmb_more">
+            <a href="lessmoney.html">
+                更多优惠信息 »
+            </a>
+        </div>
+    </div>
+        <!--//固定写死-->
+        <div class="fixed_footer">
+        <!--品牌排行-->
+        <a href="javascript:;" style="color: #fff;">
+            <div class="mmb_brand clearfix">
+                <span class="fl">品牌排行</span><i class="fr"></i>
+            </div>
+        </a>
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+        </div>
+</div>
+<!--渲染导航-->
+<script type="text/html" id="tpl">
+
+    {{each result v i}}
+    <li class="fl">
+        <a href="{{v.titlehref}}">{{#result[i].img}}<p>{{v.name}}</p></a>
+    </li>
+    {{/each}}
+</script>
+<!--渲染下面商品列表-->
+<script type="text/html" id="tpl2">
+{{each result v i}}
+<li class="clearfix"><a href="javascript:;">
+    <div class="left_pic fl">
+       {{#v.productImgSm}}
+    </div>
+
+    <div class="list_info ">
+        <div class="top_title txt-cut">
+         {{v.productName}}
+            <span>{{v.productPinkage}}</span>
+        </div>
+        <div class="bottom_title">
+            <span class="little">{{v.productFrom}}&nbsp;|{{v.productTime}}</span>
+            <span class="chat"><i class="iconfont icon-wodefankui"></i>&nbsp;{{v.productComCount}}</span>
+        </div>
+    </div>
+</a>
+</li>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

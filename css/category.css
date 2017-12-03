@@ -1,0 +1,38 @@
+.mmb_container{
+    width:100%;
+    max-width:750px;
+    min-width:320px;
+    margin:0 auto;
+    padding-top:113px;
+    padding-bottom: 115px;
+
+}
+.cate_list{
+    background-color:#c4c4c4;
+    letter-spacing: 3px;
+}
+.cate_list a{
+    color:#000;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+
+}
+.cate_all{
+    width:100%;
+    display:none;
+    height:auto;
+}
+.cate_all.change{
+}
+.cate_all li{
+    box-sizing: border-box;
+    float:left;
+    width:33.33%;
+    text-align: center;
+    border:1px solid #ccc;
+    margin:0;
+    padding:0;
+    background-color: #fff;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商场导航</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left">
+            <a href="javascript:(history.go(-1))" class="back"><i class="iconfont icon-fanhui"></i></a>
+        </div>
+        <div class="text"><h4>商场导航</h4></div>
+        <div class="header_right">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_main">
+<div class="sitenav clearfix">
+    <!--<a href="javascript:;"><i class="iconfont icon-huidingbu"></i>京东商城</a>-->
+
+
+</div>
+
+
+
+
+
+
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+{{each result v i}}
+    <a href="javascript:;"><img src="{{@result[i].navImg}}">&nbsp;&nbsp;{{v.navTitle}}</a>
+{{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/sitenav.js"></script>
+</body>
+</html>

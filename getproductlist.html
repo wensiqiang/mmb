@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/getproductlist.css">
+
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left fl">
+            <a href="javascript:;"><img src="images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_right fr">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_search">
+        <div class="search_left">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_btn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+    <div class="mmb_main">
+        <!--面包屑导航-->
+        <div  class="pro_nav">
+          <ul class="break_nav">
+        </ul>
+            <input type="button" value="筛选" class="fr">
+
+        </div>
+        <!--商品列表显示-->
+       <div class="pro_list">
+   <ul class="clearfix  pro_single">
+       <!--通过模板渲染数据来显示-->
+   </ul>
+</div>
+        <!--下面分页按钮-->
+<div class="page_btn">
+  <ul class="clearfix">
+      <li>
+    <input type="button" value="上一页" class="btn_prev">
+      </li>
+      <li>
+          <select name="sele" id="sele">
+              <!--通过循环显示数据-->
+          </select>
+      </li>
+      <li>
+    <input type="button" value="下一页" class="btn_next">
+      </li>
+  </ul>
+</div>
+
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+
+<!--渲染面包屑导航的数据-->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li class="fl">
+        <a href="index.html">首页&nbsp;></a>
+        <a href="category.html">全部分类&nbsp;></a>
+        <a href="javascript:;">{{v.category}}&nbsp;></a>
+    </li>
+    {{/each}}
+</script>
+<!--渲染商品列表-->
+<script type="text/html" id="tpl2">
+    {{if result.length==0}}
+    <p class="special_show">对不起,没搜到相关数据</p>
+    {{else}}
+    {{each result v i}}
+    <li class="clearfix" data-category="{{category}}">
+        <a href="productDetail.html?productid={{v.productId}}&category={{category}}">
+            <div class="left_pic fl">
+               {{@result[i].productImg}}
+            </div>
+            <div class="right_info">
+                <div class="info_title txt-cut">{{v.productName}}</div>
+                <div class="price">{{v.productPrice}}</div>
+                <p><span>{{v.productQuote}}</span><span class="pingjia">{{v.productCom}}</span></p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+
+<!--渲染列表项-->
+<script type="text/html" id="tpl3">
+<%for(var i=1;i<=pageCount;i++){%>
+<% if(i==pageid){%>
+<option class="select" selected value="{{i}}/{{pageCount}}">{{i}}/{{pageCount}}</option>
+<%}else{%>
+<option class="select" value="{{i}}/{{pageCount}}">{{i}}/{{pageCount}}</option>
+<%}%>
+<%}%>
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/getproductlist.js"></script>
+</body>
+</html>

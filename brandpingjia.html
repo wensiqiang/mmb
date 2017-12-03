@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新评价</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/brandpingjia.css">
+</head>
+<body>
+<div class="brandDetail_container">
+    <div class="brandDetail_nav">
+        <span>平板电视最新评价</span>
+    </div>
+    <div class="getbrand_list">
+    <div class="pic">
+        <div class="left">
+            <img src="images/tt.jpg" alt="">
+        </div>
+        <div class="right">
+            <span>你好慢虎胆大幅度的方法大家哈很多地方就开始的吧那是</span>
+        </div>
+
+    </div>
+        <i></i>
+        <div class="desc">
+            <!--<div class="top">-->
+                <!--<span>g*****n</span>-->
+                <!--<span class="star">&nbsp;&nbsp;★★★★★</span>-->
+                <!--<span class="right2">2016/05/25</span>-->
+            <!--</div>-->
+            <!--<div class="shuo">-->
+                <!--33esraewrraw534534545etree-->
+            <!--</div>-->
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/html" id="tpl">
+{{each result v i}}
+    <div class="top">
+        <span>{{v.comName}}</span>
+        <span class="star">&nbsp;&nbsp;★★★★★</span>
+        <span class="right2">{{v.comTime}}</span>
+    </div>
+    <div class="shuo">
+     {{v.comContent}}
+    </div>
+{{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/brandpingjia.js"></script>
+</body>
+</html>

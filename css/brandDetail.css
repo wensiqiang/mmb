@@ -1,0 +1,67 @@
+.brandDetail_nav{
+    height:38px;
+    line-height: 38px;
+    background-color: #c4c4c4;
+    color:#874604;
+    font-weight: bold;
+    position:fixed;
+    width:100%;
+    max-width: 750px;
+    top:0;
+    z-index: 999;
+}
+ul{
+    margin-top: 38px;
+}
+.brand_show li{
+    padding:10px;
+    height:140px;
+    border-bottom: 1px solid #aaa;
+}
+.left{
+    float:left;
+}
+.left img{
+    width:120px;
+}
+.right{
+    padding-left:130px;
+    height:120px;
+    width:100%;
+}
+.top_title {
+    width: 100%;
+    color:#000;
+    padding-top: 10px;
+}
+.star{
+    padding-top: 5px;
+    color:orange;
+}
+.star .xing{
+    float:right;
+    font-size:20px;
+}
+.bottom{
+    padding-top: 10px;
+    color:#ccc;
+}
+.footer li a{
+    color:#000;
+}
+.footer li{
+    float:left;
+    width:33.33%;
+    padding:10px;
+    text-align: center;
+}
+li input[type=button]{
+    height:50px;
+    width:100px;
+}
+select{
+    height:50px;
+    width:100px;
+    font-size:20px;
+    padding-left:40px;
+}

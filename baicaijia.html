@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/adapter.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+<div class="container">
+    <!--白菜价头部-->
+    <div class="baicai_header">
+    <div class="header_left">
+        <a href="javascript:(history.go(-1))">
+            <i class="iconfont icon-fanhui"></i>
+        </a>
+    </div>
+    <div class="title"><h4>白菜价--淘宝内部券</h4></div>
+    <div class="header_right">
+        <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+    </div>
+</div>
+    <!--白菜价导航-->
+    <div class="baicai_nav">
+        <div class="fenlei">
+     <ul class="clearfix baicai_show">
+         <!--<li class="active"><a href="#">全部</a></li>-->
+     </ul>
+        </div>
+    </div>
+    <!--白菜价商品列表-->
+    <div class="main">
+    <!--<div class="baicaijia_list">-->
+        <!--<div class="left_pic">-->
+            <!--<img src="images/hh.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="right_pic">-->
+         <!--<div class="first">[包邮]双十一红包 今日开启</div>-->
+            <!--<div class="second"><span class="spec">&yen;<b>0.00</b>-->
+            <!--</span>&nbsp;&nbsp;<span class="line">&yen;0</span>-->
+            <!--</div>-->
+            <!--<div class="third">-->
+                <!--<span class="yuan">1%</span>-->
+                <!--<span>已领82张</span>-->
+            <!--</div>-->
+            <!--<div class="four">-->
+                <!--<span class="free">点此领15元优惠券</span>-->
+                <!--<span class="link">下单链接</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    </div>
+    <!--白菜价商品尾部-->
+    <div class="footer">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登陆</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li><a href="javascript:;"><i class="iconfont icon-huidingbu"></i>返回顶部</a></li>
+        </ul>
+        <div class="footer_info">
+           <p>
+               <span class="one">手机APP下载</span>
+               <span class="two">慢慢买手机版</span>
+               <span class="three">--掌上比价平台</span>
+           </p>
+            <p class="addr">m.manmanbuy.com</p>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+    <!--渲染导航条商品信息-->
+{{each result v i}}
+<li class="active baicainav_list" data-id="{{v.titleId}}"><a href="baicaijia.html?titleid={{v.titleId}}">{{v.title}}</a></li>
+{{/each}}
+
+</script>
+
+<!--渲染下面商品列表-->
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <div class="baicaijia_list">
+        <div class="left_pic">
+            {{@result[i].productImg}}
+        </div>
+        <div class="right_pic">
+            <div class="first">{{@result[i].productName}}</div>
+            <div class="second">{{@result[i].productPrice}}
+            </div>
+            <div class="third">
+                <span class="yuan">1%</span>
+                <span>已领82张</span>
+            </div>
+            <div class="four">
+
+                <span class="free">{{@result[i].productCoupon}}</span>
+                <span class="link">{{@result[i].productHref}}</span>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/iscroll.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

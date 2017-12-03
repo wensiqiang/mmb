@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>牌子分类</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/brandDetail.css">
+</head>
+<body>
+<div class="brandDetail_container">
+        <div class="brandDetail_nav">
+           <span>平板电视产品销量排行</span>
+        </div>
+        <div class="getbrand_list">
+            <ul class="brand_show">
+                <!--<li>-->
+                    <!--<a href="#">-->
+                        <!--<div class="left">-->
+                            <!--<img src="images/tt.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--<div class="right">-->
+                            <!--<div class="top_title">-->
+                                <!--<span class="txt-cut">乐视超级电视买你想啊米的看你想看的视买你想啊米的看你想看的视买你想啊米的看你想看的</span>-->
+                            <!--</div>-->
+                            <!--<div class="star">-->
+                                <!--<span class="money">￥1500</span>-->
+                                <!--<span class="xing">★★★★★</span>-->
+                            <!--</div>-->
+                            <!--<div class="bottom">-->
+                                <!--<span>报价(7)</span>-->
+                                <!--<span>评论(1500)</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+
+            </ul>
+        </div>
+
+    <div class="footer">
+        <ul class="clearfix">
+            <li><a href="javascript:;"><input type="button" value="上一页"></a></li>
+            <li><a href="javascript:;">
+                <select name="sele" id="sele">
+                    <option value="">1/3</option>
+                    <option value="">1/3</option>
+                    <option value="">1/3</option>
+                </select>
+            </a></li>
+            <li><a href="javascript:;"><input type="button" value="下一页"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+{{each result v i}}
+    <li>
+        <a href="brandpingjia.html?productid={{v.productId}}&">
+            <div class="left">
+                {{@result[i].productImg}}
+            </div>
+            <div class="right">
+                <div class="top_title">
+                    <span class="txt-cut">{{v.productName}}</span>
+                </div>
+                <div class="star">
+                    <span class="money">{{v.productPrice}}</span>
+                    <span class="xing">★★★★★</span>
+                </div>
+                <div class="bottom">
+                    <span>{{v.productQuote}}</span>
+                    <span>{{v.productCom}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+{{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/brandDetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+.mmb_container{
+    padding-top: 100px;
+    padding-bottom: 135px;
+    /*background-color: #fff;*/
+    height:100%;
+}
+
+.mmb_search{
+    height:50px;
+    background-color: #fff;
+}
+.mmb_main{
+    margin-bottom: 136px;
+    /*height:100%;*/
+    position:relative;
+}
+.main{
+
+}
+.sitenav{
+    width: 300px;
+    margin: 10px auto;
+}
+.sitenav a{
+    padding: 10px 8px;
+    background: #f4f4f4;
+    border: 1px solid #bfbfbf;
+    float: left;
+    margin: 0 0 5px 5px;
+    color:#000;
+}
+
+.header_left{
+    height:40px;
+    width:40px;
+    /*background-color: blue;*/
+    float:left;
+}
+.header_left i{
+    color: #fff;
+    font-size: 21px;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 31px;
+}
+.header_right{
+    height:40px;
+    width:50px;
+    float:right;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.header_right img{
+    height: 34px;
+    margin-left:-3px;
+}
+.text{
+    margin-right: 40px;
+    margin-right: 40px;
+    text-align: center;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    font-size:18px;
+    font-weight:400;
+}
+.text h4{
+    margin-top: 17px;
+}
+.product_list li{
+    padding: 10px 8px;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    position: relative;
+    height: 120px;
+    border-bottom: 1px solid #ccc;
+}
+
+.brand_nav{
+    height: 35px;
+    background-color: #ccc;
+    line-height: 35px;
+    padding-left: 20px;
+}
+.brand_nav a{
+    color:#000;
+    font-size:16px;
+}
+.hot_brand{
+    height:38px;
+    background-color:#ccc;
+    line-height: 38px;
+    padding-left: 20px;
+    border-top:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+}
+.hot_brand a{
+    color:#874604;
+}
+.brand_show li:nth-child(1) .brand_icon{
+    background-color: red;
+}
+.brand_show li:nth-child(2) .brand_icon{
+    background-color: orange;
+}
+.brand_show li:nth-child(3) .brand_icon{
+    background-color: darkgreen;
+}
+.getbrand_list li{
+    height:85px;
+    line-height: 70px;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid #aaa;
+    border-top:1px solid #aaa;
+    list-style: none;
+}
+.getbrand_list li a{
+    height:85px;
+    width:100%;
+    display: inline-block;
+    color:#000;
+}
+
+.brand_icon{
+    height: 28px;
+    width: 28px;
+    background-color:#ccc;
+    color:#fff;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    float:left;
+}
+.brand_icon li{
+    background-color: blue;
+}
+
+
+.brand_right{
+    margin-left: 40px;
+}
+.right_top{
+    height:30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-size: 19px;
+}
+.right_bottom{
+    height:40px;
+    line-height:40px;
+}
+.right_bottom span{
+    font-size: 15px;
+    color: #ccc;
+}
+.right_top i{
+    font-size: 25px;
+    float:right;
+    transform: rotate(180deg);
+    position: relative;
+    top:20px;
+}
+
+
+
+
+.foot_pic .yuan{
+    padding-top: 10px;
+}

@@ -1,0 +1,259 @@
+
+.header_left{
+padding:10px;
+}
+.header_left a{
+   height:50px;
+    display: block;
+}
+.header_left a img{
+  height:25px;
+
+}
+.header_right{
+    padding:10px;
+    position: absolute;
+    right: 0;
+}
+.header_right a{
+    height:34px;
+
+}
+.header_right a img{
+   height:34px;
+}
+
+.mmb_main{
+    position:relative;
+}
+
+.mmb_search{
+    border-bottom: 1px solid #e6e6e6;
+    height:33px;
+    line-height:30px;
+    position: fixed;
+    background-color: White;
+    padding:10px;
+    width:100%;
+    max-width: 750px;
+    top: 50px;
+    z-index:999;
+
+}
+.mmb_search input{
+    height:30px;
+    width:95%;
+    padding:0;
+    margin:0;
+    border-radius: 18px;
+    background-color: #f1f1f1;
+    font-size:16px;
+    padding-left:5%;
+
+}
+.search_btn input{
+    font-size:16px;
+    background: #ff841d;
+    color: #FFFFFF;
+    width:63px;
+    height:30px;
+    line-height:30px;
+    position:absolute;
+    right:30px;
+    top:11px;
+    padding-left: 5px;
+    border: none;
+}
+.mmb_nav{
+    background-color: White;
+    padding: 6px 0px;
+    /*clear: both;*/
+}
+.mmb_nav li{
+    width:25%;
+    text-align: center;
+    padding:10px 0;
+}
+.mmb_nav img{
+    width:50px;
+}
+.mmb_nav p{
+    color: #5a5a5a;
+    margin-top: 3px;
+    font-size: 13px;
+}
+.mmb_single{
+    height:35px;
+    line-height:35px;
+    font-size:18px;
+    background-color: #ff9000;
+    padding-left:10px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+}
+.mmb_single a{
+    color:#fff;
+    font-weight:700;
+}
+.mmb_single i{
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    font-size: 32px;
+    margin-top: 6px;
+    background: url("../images/sprite_index.png") 30px 30px;
+    background-position:-153px -37px;
+}
+.mmb_content{
+    width:100%;
+}
+.mmb_content li {
+    padding: 14px 8px;
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.left_pic{
+    width:110px;
+}
+.left_pic img{
+    width:100px;
+}
+.top_title{
+color: #333333;
+word-break: break-all;
+font-size: 15px;
+line-height: 19px;
+min-height: 57px;
+text-align: left;
+font-weight: normal;
+}
+/*多行溢出*/
+.txt-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+     -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+
+.top_title span{
+    color: #ff6c00;
+    display: inline;
+}
+.bottom_title{
+    margin-top: 8px;
+    color: #a1a1a1;
+}
+.bottom_title .little{
+    color: #a1a1a1;
+    font-size: 12px;
+    float: left;
+}
+
+.chat{
+    color: #a1a1a1;
+    font-size: 12px;
+    float: right;
+    padding-left: 5px;
+}
+.mmb_more{
+    width:100%;
+    text-align: center;
+    /*background-color: #efefef;*/
+}
+.mmb_more a{
+    height:30px;
+    line-height: 30px;
+    border:1px solid #ddd;
+    background-color: #F4F4F4;
+    display: block;
+    margin:10px;
+    font-size:13px;
+    border-radius: 4px;
+    color:#5a5a5a;
+    background-image: linear-gradient(#ffffff, #f4f4f4);
+}
+
+.mmb_brand{
+    height:35px;
+    line-height:35px;
+    background-color: #ff9000;
+    color:#fff;
+    font-weight: bold;
+    border-bottom: solid 1px #ffc881;
+    font-size: 18px;
+    padding-left:10px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+    margin-top: 11px;
+}
+.mmb_brand i{
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    font-size: 32px;
+    margin-top: 6px;
+    background: url("../images/sprite_index.png") 30px 30px;
+    background-position:-153px -37px;
+}
+.mmb_footer{
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+    background: #efefef;
+    margin-top: 10px;
+}
+
+.footer_top a{
+    float: left;
+    font-size: 14px;
+    border-right: 1px solid #c4c4c4;
+    text-align: center;
+    width: 33.33%;
+    box-sizing: border-box;
+    color:black;
+}
+.foot_info{
+    margin-top:15px;
+    text-align: center;
+    font-size:13px;
+    padding-bottom: 15px;
+}
+.foot_info a{
+    color:black;
+}
+.foot_info .upload{
+    color:red;
+}
+.foot_pic img{
+    width:50px;
+    position:fixed;
+    right:5px;
+    bottom:63px;
+}
+.foot_pic .yuan{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: #fff;
+    position:fixed;
+    right:8px;
+    bottom:21px;
+}
+.yuan .gotop{
+    font-size:40px;
+}
+
+.fixed_footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    max-width: 750px;
+    z-index:999;
+    opacity:1;
+    background-color: #efefef;
+}
+
+.change{
+    display: none;
+}

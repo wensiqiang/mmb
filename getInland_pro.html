@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/getInland_pro.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left">
+            <a href="javascript:(history.go(-1))" class="back"><i class="iconfont icon-fanhui"></i></a>
+        </div>
+        <div class="text"><h4>国内折扣</h4></div>
+        <div class="header_right">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <div class="mmb_main">
+        <div class="contain">
+            <!--通过模板引擎渲染地区数据-->
+        </div>
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+
+<!--渲染数据-->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <h3>{{v.productName}}</h3>
+    <div class="price">{{v.productPrice}}</div>
+    <div class="info">
+        <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span>
+    </div>
+    <div class="pic fr">
+        {{@result[i].productImg}}
+    </div>
+    <div class="main">
+        <!--<p>{{v.productInfo}}</p>-->
+        <!--<p>{{@result[i].productImgLg}}</p>-->
+    </div>
+
+    <!--渲染地区-->
+    <div class="area">
+        {{productCity}}
+    </div>
+    <a href="javascript" class="gobuy">
+        前往购买
+    </a>
+    <div class="erweima">
+        <img src="images/mmbweixin2.png" alt="" style="margin: 0 auto">
+    </div>
+    <!--渲染评论-->
+    <div class=" review">
+        {{@result[i].productComment}}
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/getInland_pro.js"></script>
+</body>
+</html>

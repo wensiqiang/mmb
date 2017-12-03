@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left fl">
+            <a href="javascript:;"><img src="images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_right fr">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_search">
+        <div class="search_left">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_btn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+    <div class="mmb_main">
+        <!--面包屑导航-->
+        <div  class="pro_nav">
+            <ul class="break_nav">
+                <!--通过渲染来显示数据-->
+            </ul>
+            <input type="button" value="筛选" class="fr">
+        </div >
+        <!--显示图片-->
+        <div class="pro_detail">
+           <!--挖个坑 显示数据-->
+        </div>
+        <ul class="clearfix pro_desc_nav">
+            <li>
+                <a href="#">比价购买</a>
+            </li>
+            <li>
+                <a href="#">产品参数</a>
+            </li>
+            <li>
+                <a href="#">评价</a>
+            </li>
+        </ul>
+        <ul class="jd_info clearfix">
+            <li class=" clearfix fl">
+                <a href="#" class="go"></a>
+                <div class="mall">
+                    <img src="images/1.png">&nbsp;&nbsp;京东商城
+                </div>
+                <div class="pro_money fr">
+                    <span class="price">&yen;1198.00</span>
+                    <a href="#" class="buy">去购买</a>
+                </div>
+            </li>
+        </ul>
+        <div class="pro_info">
+            <span>*实际价格我们自己定义。你们知道吗</span>
+        </div>
+        <div class="review">
+            网友评价
+        </div>
+        <div class="review_list">
+            <ul class="pro_pingjia">
+
+            </ul>
+        </div>
+
+        <div class="youhui_more">
+            <a href="javascript:;">
+                查看更多评价 »
+            </a>
+        </div>
+
+
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="break_nav">
+    {{each result v i}}
+    <li class="fl">
+        <a href="index.html">首页&nbsp;></a>
+        <a href="category.html">{{category}}&nbsp;></a>
+        <a href="javascript:;">{{jianjie}}&nbsp;></a>
+    </li>
+    {{/each}}
+</script>
+
+
+
+<!--遍历上面的商品信息-->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <p>{{v.productName}}</p>
+    <div class="pro_pic">
+       {{@result[i].productImg}}
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li>
+        <div class="clearfix">
+            <span class="fl">{{v.comName}}</span>
+            <span class="fr">{{v.comTime}}</span>
+        </div>
+        <div class="clearfix">
+            <span class="fr">{{v.comFrom}}</span>
+        </div>
+        <div>
+            {{v.comContent}}
+        </div>
+    </li>
+    {{/each}}
+
+</script>
+
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/productDetail.js"></script>
+</body>
+</html>

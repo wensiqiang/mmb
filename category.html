@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页面</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left fl">
+            <a href="javascript:;"><img src="images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_right fr">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_search">
+        <div class="search_left">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_btn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+    <div class="mmb_main">
+
+        <!--<a data-id="{{v.titleId}}" class="cate_show" href="javascript:;">大家电</a>-->
+
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+
+<!--渲染数据-->
+<!--分类标题-->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <div class="cate_list">
+    <a data-id="{{v.titleId}}" class="cate_show" href="javascript:;">{{v.title}}</a>
+
+    <ul class="cate_all clearfix">
+<!--通过模板渲染数据 显示数据-->
+    </ul>
+    </div>
+    {{/each}}
+</script>
+
+<!--下面小标题渲染-->
+<script type="text/html" id="tpl2">
+   {{each result v i}}
+   <li data-category="{{v.category}}" data-id="{{v.titleId}}">
+       <a href="getproductlist.html?pageid={{1}}&category={{v.category}}&categoryid={{v.categoryId}}">{{v.category}}</a>
+   </li>
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

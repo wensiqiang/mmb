@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新优惠</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--慢慢买头部-->
+    <div class="mmb_header clearfix">
+        <div class="header_left">
+            <a href="javascript:(history.go(-1))" class="back"><i class="iconfont icon-fanhui"></i></a>
+        </div>
+        <div class="text"><h4>国内折扣--最新优惠</h4></div>
+        <div class="header_right">
+            <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <!--慢慢买搜索-->
+    <div class="mmb_search">
+        <div class="search_left">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_btn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+    <div class="mmb_main">
+        <div class="mmb_content">
+        <ul class="product_list clearfix">
+          <!--通过模板渲染显示数据-->
+        </ul>
+        </div>
+        <div class="page_btn">
+            <ul class="clearfix">
+                <li>
+                    <input type="button" value="上一页" class="btn_prev">
+                </li>
+                <li>
+                    <select name="sele" id="sele" class="sele">
+                      <!--通过模板殷勤渲染显示数据-->
+                    </select>
+
+                </li>
+                <li>
+                    <input type="button" value="下一页" class="btn_next">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--//固定写死-->
+    <div class="fixed_footer">
+        <!--慢慢买尾部-->
+        <div class="mmb_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="huidingbu"><i class="iconfont icon-huidingbu gotop"></i>返回顶部</a>
+            </div>
+
+        </div>
+        <!--慢慢买尾部信息-->
+        <div class="foot_info">
+            <p>
+                <a href="javascript:;" class="upload">手机APP下载</a><a href="javascript:;">
+                慢慢买手机版</a>--掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!--底部固定图片-->
+        <div class="foot_pic">
+            <img src="images/bottom.png" alt="">
+            <div class="yuan"><i class="iconfont icon-huidingbu gotop"></i></div>
+        </div>
+    </div>
+</div>
+<!--渲染每一条商品数据-->
+<script type="text/html" id="tpl">
+{{each result v i}}
+    <li class="clearfix">
+        <a href="second_prodetail.html?productid={{v.productId}}">
+        <div class="left_pic fl">
+            {{@result[i].productImg2}}
+        </div>
+
+        <div class="list_info ">
+            <div class="top_title txt-cut">
+                {{v.productName}}
+                <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="bottom_title">
+                <span class="little">{{v.productFrom}}&nbsp;|{{v.productTime}}</span>
+                <span class="chat"><i class="iconfont icon-wodefankui"></i>&nbsp;{{v.productComCount}}</span>
+            </div>
+        </div>
+    </a>
+    </li>
+    {{/each}}
+</script>
+<!--渲染系下面的下拉选择框-->
+<script type="text/html" id="tpl2">
+    <% for(var i=1;i<=count;i++){ %>
+    <% i=i>9?i:"0"+i%>
+    <% if(i==pageid){%>
+    <option value={{i}}/{{count}} selected>{{i}}/{{count}}</option>
+    <%}else{%>
+    <option value={{i}}/{{count}}>{{i}}/{{count}}</option>
+    <%}%>
+
+    <%}%>
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/commons.js"></script>
+<script src="js/moneyctrl.js"></script>
+</body>
+</html>

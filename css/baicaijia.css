@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.html,
+body {
+  height: 100%;
+}
+.container {
+  padding-top: 1.8rem;
+  padding-bottom: 3.7rem;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.main {
+  position: relative;
+}
+.baicai_header {
+  height: 1.8rem;
+  background-color: #fe4a65;
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header_left {
+  height: 1.8rem;
+  width: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header_left a {
+  color: #fff;
+  height: 1.8rem;
+  width: 1.8rem;
+  display: block;
+  text-align: center;
+  line-height: 1.8rem;
+}
+.header_left a i {
+  font-size: 0.7rem;
+}
+.header_right {
+  height: 1.8rem;
+  width: 1.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.header_right img {
+  margin-top: 0.4rem;
+  height: 1.2rem;
+}
+.title {
+  margin: 0 1.6rem;
+  height: 1.8rem;
+  text-align: center;
+}
+.title h4 {
+  height: 1.8rem;
+  margin: 0;
+  line-height: 1.8rem;
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+.baicai_nav {
+  height: 1.6rem;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  max-width: 750px;
+  z-index: 999;
+}
+.baicai_nav ul {
+  width: 40rem;
+}
+.baicai_nav li {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  float: left;
+  padding: 0 0.4rem;
+}
+.baicai_nav li a {
+  font-size: 0.6rem;
+  color: #000;
+}
+.baicai_nav li.active {
+  border-bottom: 2px solid #fe4a65;
+}
+.baicai_nav li.active a {
+  color: #fe4a65;
+}
+.main {
+  padding-top: 1.6rem;
+  background-color: #eee;
+}
+.baicaijia_list {
+  height: 6.2rem;
+  width: 100%;
+  margin-top: 0.3rem;
+  background-color: #fff;
+  position: relative;
+}
+.left_pic {
+  padding: 0.2rem;
+  padding-top: 0.36rem;
+  float: left;
+}
+.left_pic img {
+  height: 5.4rem;
+  width: 5.4rem;
+}
+.right_pic {
+  height: 6rem;
+  margin-left: 6rem;
+  margin-right: 0.2rem;
+  padding-top: 0.4rem;
+}
+.right_pic .first {
+  padding-top: 0.4rem;
+  font-size: 0.6rem;
+}
+.right_pic .second {
+  margin-top: 0.5rem;
+  color: red;
+}
+.right_pic .second del {
+  color: #ccc;
+}
+.right_pic .second .line {
+  text-decoration: line-through;
+}
+.right_pic .third {
+  height: 0.7rem;
+  margin-top: 0.5rem;
+}
+.right_pic .third .yuan {
+  width: 4rem;
+  height: 0.6rem;
+  line-height: 0.66rem;
+  background-color: red;
+  border-radius: 0.3rem;
+  margin-top: 0.06rem;
+  color: #fff;
+  text-align: center;
+}
+.right_pic .third span {
+  font-size: 0.5rem;
+  color: red;
+}
+.right_pic .four {
+  margin-top: 0.6rem;
+}
+.right_pic .four .free {
+  font-size: 0.6rem;
+  height: 1rem;
+  line-height: 1rem;
+  border: 1px dashed red;
+}
+.right_pic .four .free a {
+  color: red;
+}
+.right_pic .four .link {
+  float: right;
+  margin-right: 0.2rem;
+  width: 2.36rem;
+  height: 1.1rem;
+  background-color: red;
+  line-height: 1.1rem;
+  border-radius: 0.2rem;
+  font-size: 0.54rem;
+}
+.right_pic .four .link a {
+  color: #fff;
+}
+.footer {
+  width: 100%;
+  height: 3.2rem;
+  background-color: pink;
+  position: fixed;
+  bottom: 0;
+  background-color: #ddd;
+  padding-bottom: 3.4rem;
+  max-width: 750px;
+}
+.footer li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-right: 1px solid #777;
+}
+.footer li a {
+  color: #000;
+  font-size: 0.5rem;
+}
+.footer li:last-child {
+  border-right: none;
+}
+.footer_info {
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.footer_info p {
+  font-size: 0.5rem;
+  margin-bottom: 0;
+}
+.footer_info p .one {
+  color: red;
+}
+.footer_info p .two {
+  color: #000;
+}
+.footer_info p .three {
+  color: #5a5a5a;
+}
+.footer_info .addr {
+  padding-bottom: 0.2rem;
+}

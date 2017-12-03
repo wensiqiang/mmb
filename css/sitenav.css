@@ -1,0 +1,86 @@
+.mmb_container{
+    padding-top: 50px;
+    padding-bottom: 135px;
+    background-color: #fff;
+    height:100%;
+}
+.mmb_search{
+    height:50px;
+}
+.mmb_main{
+    background-color: #fff;
+}
+.main{
+    position:relative;
+    height:100%;
+}
+.sitenav{
+    width: 300px;
+    margin: 10px auto;
+    height:100%;
+    padding-bottom:130px;
+    background-color: #fff;
+
+}
+.sitenav a{
+padding: 10px 8px;
+background: #f4f4f4;
+border: 1px solid #bfbfbf;
+float: left;
+margin: 0 0 5px 5px;
+    color:#000;
+}
+
+.header_left{
+    height:40px;
+    width:40px;
+    /*background-color: blue;*/
+    float:left;
+}
+.header_left i{
+    color: #fff;
+    font-size: 21px;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 31px;
+}
+.header_right{
+    height:40px;
+    width:50px;
+    float:right;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.header_right img{
+    height: 34px;
+    margin-left:-3px;
+}
+.text{
+    margin-right: 40px;
+    margin-right: 40px;
+    text-align: center;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    font-size:18px;
+    font-weight:400;
+}
+.text h4{
+    margin-top: 17px;
+}
+.product_list li{
+    padding: 10px 8px;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    position: relative;
+    height: 120px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+.foot_pic .yuan{
+     padding-top: 10px;
+ }

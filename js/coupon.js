@@ -1,0 +1,11 @@
+$(function(){
+    //发送ajax，请求后台数据
+    $.ajax({
+        type:"get",
+        url:"http://localhost:9090/api/getcoupon",
+        success:function(data){
+            console.log(data);
+            $(".coupon_show").html(template("tpl",data));
+        }
+    })
+})
